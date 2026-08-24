@@ -41,7 +41,7 @@ BASE_DIR_PATH="$(dirname "$(realpath "${0}")")"
 ## Module
 ################################################################################
 
-function mod_anduinos_package_install () {
+function mod_anduinos_desktop_package_install () {
 
 	local run_cmd="apt-get install -y --install-recommends
 		anduinos-desktop
@@ -75,9 +75,9 @@ function mod_anduinos_package_install () {
 ## Model
 ################################################################################
 
-function model_do_anduinos_package_install () {
+function model_do_anduinos_desktop_package_install () {
 
-	mod_anduinos_package_install
+	mod_anduinos_desktop_package_install
 
 }
 
@@ -86,9 +86,9 @@ function model_do_anduinos_package_install () {
 ## Portal
 ################################################################################
 
-function portal_do_anduinos_package_install () {
+function portal_do_anduinos_desktop_package_install () {
 
-	model_do_anduinos_package_install
+	model_do_anduinos_desktop_package_install
 
 }
 
@@ -105,7 +105,7 @@ echo "==== args:" ${@} "===="
 
 function __main__ () {
 
-	portal_do_anduinos_package_install "${@}"
+	portal_do_anduinos_desktop_package_install "${@}"
 
 }
 

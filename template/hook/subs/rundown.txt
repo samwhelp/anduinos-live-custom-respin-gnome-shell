@@ -20,5 +20,5 @@
 ## ## AnduinOS
 ##
 
-anduinos-package-install
+anduinos-desktop-package-install
 anduinos-installer-package-install
